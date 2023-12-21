@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title></title>
+    <script src="video.js"></script>
+    <script src="videojs-contrib-hls.js"></script>
+    <link href="video-js.css" rel="stylesheet" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide scrollbars */
+        }
+        .video-container {
+            position: relative;
+            width: 100vw; /* 100% of viewport width */
+            height: 100vh; /* 100% of viewport height */
+            overflow: hidden; /* Hide scrollbars */
+        }
+        .video-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <!-- HLS Video -->
+        <video id='hls-example' class="video-js vjs-default-skin" muted controls autoplay preload="auto" data-setup='{}'>
+           <source type="application/x-mpegURL" src="output.m3u8">
+        </video>
+    </div>   
+</body>
+</html>
